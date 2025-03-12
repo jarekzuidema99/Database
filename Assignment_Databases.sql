@@ -3,6 +3,16 @@
 .nullvalue "NULL"
 
 DROP TABLE IF EXISTS tickets;
+DROP TABLE IF EXISTS VIP_tickets;
+DROP TABLE IF EXISTS normal_tickets;
+DROP TABLE IF EXISTS buys;
+DROP TABLE IF EXISTS customer;
+DROP TABLE IF EXISTS employee;
+DROP TABLE IF EXISTS security;
+DROP TABLE IF EXISTS sound_technician;
+DROP TABLE IF EXISTS artist;
+DROP TABLE IF EXISTS plays_at;
+DROP TABLE IF EXISTS music_hall;
 
 CREATE TABLE tickets(
     ticket_id INTEGER
