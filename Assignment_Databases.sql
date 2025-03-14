@@ -10,6 +10,7 @@ DROP TABLE IF EXISTS security;
 DROP TABLE IF EXISTS sound_technician;
 DROP TABLE IF EXISTS artist;
 DROP TABLE IF EXISTS plays_at;
+DROP TABLE IF EXISTS sound_check;
 DROP TABLE IF EXISTS music_hall;
 
 CREATE TABLE tickets(
@@ -174,11 +175,11 @@ INSERT INTO plays_at(artist_id, name, hall_num, event_time, event_date) VALUES('
 INSERT INTO plays_at(artist_id, name, hall_num, event_time, event_date) VALUES('594', 'Pierce The Veil', '4', '17:55', '29-09-2025');
 INSERT INTO plays_at(artist_id, name, hall_num, event_time, event_date) VALUES('994', 'Deftones', '5', '21:30', '27-05-2025');
 
-INSERT INTO sound_check(employee_id, hall_num, check_time, check_date) VALUES ('052727', '3', '12:30', '22-04-2025')
-INSERT INTO sound_check(employee_id, hall_num, check_time, check_date) VALUES ('052727', '1', '13:45', '10-07-2025')
-INSERT INTO sound_check(employee_id, hall_num, check_time, check_date) VALUES ('058948', '4', '15:00', '27-09-2025')
-INSERT INTO sound_check(employee_id, hall_num, check_time, check_date) VALUES ('058948', '5', '11:30', '12-05-2025')
-INSERT INTO sound_check(employee_id, hall_num, check_time, check_date) VALUES ('051188', '2', '17:55', '15-02-2026')
+INSERT INTO sound_check(employee_id, hall_num, check_time, check_date) VALUES ('052727', '3', '12:30', '22-04-2025');
+INSERT INTO sound_check(employee_id, hall_num, check_time, check_date) VALUES ('052727', '1', '13:45', '10-07-2025');
+INSERT INTO sound_check(employee_id, hall_num, check_time, check_date) VALUES ('058948', '4', '15:00', '27-09-2025');
+INSERT INTO sound_check(employee_id, hall_num, check_time, check_date) VALUES ('058948', '5', '11:30', '12-05-2025');
+INSERT INTO sound_check(employee_id, hall_num, check_time, check_date) VALUES ('051188', '2', '17:55', '15-02-2026');
 
 INSERT INTO music_hall(name, hall_num) VALUES ('Ziggo Dome', '1');
 INSERT INTO music_hall(name, hall_num) VALUES ('Patronaat', '2');
