@@ -13,6 +13,7 @@ DROP TABLE IF EXISTS plays_at;
 DROP TABLE IF EXISTS sound_check;
 DROP TABLE IF EXISTS music_hall;
 DROP TABLE IF EXISTS works_at;
+DROP TABLE IF EXISTS check_on;
 
 CREATE TABLE tickets (
     ticket_id INTEGER,
@@ -60,6 +61,15 @@ CREATE TABLE sound_technician (
     employee_id INTEGER,
     PRIMARY KEY(employee_id),
     FOREIGN KEY (employee_id) REFERENCES employee(employee_id)
+);
+
+CREATE TABLE check_on (
+check_id INTEGER,
+main INTEGER,
+inspector INTEGER,
+PRIMARY KEY (check_id),
+FOREIGN KEY (main) REFERENCES employee(employee_id),
+FOREIGN KEY (inspector) REFERENCES employee(employee_id)
 );
 
 CREATE TABLE artist (
@@ -150,6 +160,12 @@ INSERT INTO sound_technician(employee_id) VALUES ('058948');
 INSERT INTO sound_technician(employee_id) VALUES ('051948');
 INSERT INTO sound_technician(employee_id) VALUES ('058372');
 INSERT INTO sound_technician(employee_id) VALUES ('051188');
+
+INSERT INTO check_on(check_id, main, inspector) VALUES ("1", '052727', '058948');
+INSERT INTO check_on(check_id, main, inspector) VALUES ("2", '052727', '051948');
+INSERT INTO check_on(check_id, main, inspector) VALUES ("3", '058372', '051188');
+INSERT INTO check_on(check_id, main, inspector) VALUES ("4", '051948', '051188');
+INSERT INTO check_on(check_id, main, inspector) VALUES ("5", '058371', '051948');
 
 INSERT INTO artist(artist_id, name, check_by) VALUES ('101', 'Kendrick Lamar', '053829');
 INSERT INTO artist(artist_id, name, check_by) VALUES ('345', 'Tyler, The Creator', '053434');
